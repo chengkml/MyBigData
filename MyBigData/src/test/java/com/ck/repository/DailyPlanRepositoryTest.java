@@ -23,6 +23,13 @@ public class DailyPlanRepositoryTest extends BaseRepositoryTest<DailyPlanReposit
 	@Transactional
 	@Rollback(true)
 	public void testGetPlanByRange() {
+		addDailyPlan();
+		Date start = DateUtils.addDays(new Date(), -3);
+		Date end = new Date();
+		assertEquals(2, repo.getPlanByRange("ck", start, end, 0,5).getTotalElements());
+	}
+
+	private void addDailyPlan() {
 		DailyPlanPo po = new DailyPlanPo();
 		po.setId("1");
 		po.setCreateBy("ck");
@@ -33,8 +40,13 @@ public class DailyPlanRepositoryTest extends BaseRepositoryTest<DailyPlanReposit
 		po.setId("2");
 		po.setCreateDate(DateUtils.addDays(new Date(), -2));
 		dao.save(po);
-		Date start = DateUtils.addDays(new Date(), -3);
-		Date end = new Date();
-		assertEquals(repo.getPlanByRange("ck", start, end, 1,5).size(), 2);
+	}
+	
+	@Test
+	@Transactional
+	@Rollback(true)
+	public void testGetPlanByPage() {
+		addDailyPlan();
+		assertEquals(2, repo.getPlanByPage("ck", 0,5).getTotalElements());
 	}
 }

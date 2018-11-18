@@ -3,6 +3,7 @@ package com.ck.vo;
 import java.util.Date;
 
 import com.ck.vo.base.BaseVo;
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -12,17 +13,19 @@ public class DailyPlanItemVo extends BaseVo{
 	
 	private static final long serialVersionUID = 1L;
 
-	private int planId;
+	private Integer planId;
 
 	private String itemContent;
 
-	private int priority;
+	private Integer priority;
 
+	@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone="GMT+8")
 	private Date planTime;
 
+	@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone="GMT+8")
 	private Date finishTime;
 
-	private short finishType;
+	private Short finishType;
 
 	private String finishDescr;
 }

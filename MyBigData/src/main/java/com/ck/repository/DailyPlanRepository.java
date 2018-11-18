@@ -1,11 +1,12 @@
 package com.ck.repository;
 
 import java.util.Date;
-import java.util.List;
 
 import org.apache.commons.lang.time.DateUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Repository;
 
@@ -52,11 +53,13 @@ public class DailyPlanRepository extends BaseRepository<DailyPlanDao, DailyPlanP
 	 * @param end
 	 * @return
 	 */
-	public List<DailyPlan> getPlanByRange(String name, Date startDate, Date endDate, int page, int size){
-		return posToModels(dao.getPlanByRange(name, startDate, DateUtils.addDays(endDate, 1), new PageRequest(page-1, size)));
+	public Page<DailyPlan> getPlanByRange(String name, Date startDate, Date endDate, int page, int size){
+		Page<DailyPlanPo> planPage = dao.getPlanByRange(name, startDate, DateUtils.addDays(endDate, 1), new PageRequest(page, size));
+		return new PageImpl<>(posToModels(planPage.getContent()),new PageRequest(page, size),planPage.getTotalElements());
 	}
 	
-	public List<DailyPlan> getPlanByPage(String name, int page, int size){
-		return posToModels(dao.getPlanByPage(name, new PageRequest(page-1, size)));
+	public Page<DailyPlan> getPlanByPage(String name, int page, int size){
+		Page<DailyPlanPo> planPage = dao.getPlanByPage(name, new PageRequest(page, size));
+		return new PageImpl<>(posToModels(planPage.getContent()),new PageRequest(page, size),planPage.getTotalElements());
 	}
 }

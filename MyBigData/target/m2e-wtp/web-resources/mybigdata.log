@@ -13,7 +13,7 @@ HHH000228: Running hbm2ddl schema update
 HHH000102: Fetching database metadata
 HHH000396: Updating schema
 HHH000261: Table found: my_bigdata.daily_plan
-HHH000037: Columns: [create_by, descr, last_modified_time, user_id, scores, id, last_modified_by, create_date]
+HHH000037: Columns: [create_by, descr, last_modified_time, scores, id, last_modified_by, create_date]
 HHH000108: Foreign keys: []
 HHH000126: Indexes: [primary]
 HHH000261: Table found: my_bigdata.daily_plan_item
@@ -52,7 +52,1149 @@ HHH000228: Running hbm2ddl schema update
 HHH000102: Fetching database metadata
 HHH000396: Updating schema
 HHH000261: Table found: my_bigdata.daily_plan
-HHH000037: Columns: [create_by, descr, last_modified_time, user_id, scores, id, last_modified_by, create_date]
+HHH000037: Columns: [create_by, descr, last_modified_time, scores, id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.daily_plan_item
+HHH000037: Columns: [create_by, plan_time, finish_type, last_modified_time, finish_descr, id, last_modified_by, item_content, priority, create_date, plan_id, finish_time]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.knowledge_point
+HHH000037: Columns: [create_by, last_modified_time, point_content, id, topic_id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.knowledge_topic
+HHH000037: Columns: [create_by, last_modified_time, topic_name, parent_topic_id, topic_descr, id, topic_id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.sequence_records
+HHH000037: Columns: [create_by, sequence_count, sequence_type, last_modified_time, sequence_val, id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.users
+HHH000037: Columns: [create_by, user_type, last_modified_time, user_name, user_age, id, user_job, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000232: Schema update complete
+HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+HHH000412: Hibernate Core {4.1.7.Final}
+HHH000206: hibernate.properties not found
+HHH000021: Bytecode provider name : javassist
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+HHH000397: Using ASTQueryTranslatorFactory
+HHH000228: Running hbm2ddl schema update
+HHH000102: Fetching database metadata
+HHH000396: Updating schema
+HHH000261: Table found: my_bigdata.daily_plan
+HHH000037: Columns: [create_by, descr, last_modified_time, scores, id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.daily_plan_item
+HHH000037: Columns: [create_by, plan_time, finish_type, last_modified_time, finish_descr, id, last_modified_by, item_content, priority, create_date, plan_id, finish_time]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.knowledge_point
+HHH000037: Columns: [create_by, last_modified_time, point_content, id, topic_id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.knowledge_topic
+HHH000037: Columns: [create_by, last_modified_time, topic_name, parent_topic_id, topic_descr, id, topic_id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.sequence_records
+HHH000037: Columns: [create_by, sequence_count, sequence_type, last_modified_time, sequence_val, id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.users
+HHH000037: Columns: [create_by, user_type, last_modified_time, user_name, user_age, id, user_job, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000232: Schema update complete
+HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+HHH000412: Hibernate Core {4.1.7.Final}
+HHH000206: hibernate.properties not found
+HHH000021: Bytecode provider name : javassist
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+HHH000397: Using ASTQueryTranslatorFactory
+HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+HHH000412: Hibernate Core {4.1.7.Final}
+HHH000206: hibernate.properties not found
+HHH000021: Bytecode provider name : javassist
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+HHH000397: Using ASTQueryTranslatorFactory
+HHH000228: Running hbm2ddl schema update
+HHH000102: Fetching database metadata
+HHH000396: Updating schema
+HHH000261: Table found: my_bigdata.daily_plan
+HHH000037: Columns: [create_by, descr, last_modified_time, scores, id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.daily_plan_item
+HHH000037: Columns: [create_by, plan_time, finish_type, last_modified_time, finish_descr, id, last_modified_by, item_content, priority, create_date, plan_id, finish_time]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.knowledge_point
+HHH000037: Columns: [create_by, last_modified_time, point_content, id, topic_id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.knowledge_topic
+HHH000037: Columns: [create_by, last_modified_time, topic_name, parent_topic_id, topic_descr, id, topic_id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.sequence_records
+HHH000037: Columns: [create_by, sequence_count, sequence_type, last_modified_time, sequence_val, id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.users
+HHH000037: Columns: [create_by, user_type, last_modified_time, user_name, user_age, id, user_job, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000232: Schema update complete
+HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+HHH000412: Hibernate Core {4.1.7.Final}
+HHH000206: hibernate.properties not found
+HHH000021: Bytecode provider name : javassist
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+HHH000397: Using ASTQueryTranslatorFactory
+HHH000228: Running hbm2ddl schema update
+HHH000102: Fetching database metadata
+HHH000396: Updating schema
+HHH000261: Table found: my_bigdata.daily_plan
+HHH000037: Columns: [create_by, descr, last_modified_time, scores, id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.daily_plan_item
+HHH000037: Columns: [create_by, plan_time, finish_type, last_modified_time, finish_descr, id, last_modified_by, item_content, priority, create_date, plan_id, finish_time]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.knowledge_point
+HHH000037: Columns: [create_by, last_modified_time, point_content, id, topic_id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.knowledge_topic
+HHH000037: Columns: [create_by, last_modified_time, topic_name, parent_topic_id, topic_descr, id, topic_id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.sequence_records
+HHH000037: Columns: [create_by, sequence_count, sequence_type, last_modified_time, sequence_val, id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.users
+HHH000037: Columns: [create_by, user_type, last_modified_time, user_name, user_age, id, user_job, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000232: Schema update complete
+HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+HHH000412: Hibernate Core {4.1.7.Final}
+HHH000206: hibernate.properties not found
+HHH000021: Bytecode provider name : javassist
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+HHH000397: Using ASTQueryTranslatorFactory
+HHH000228: Running hbm2ddl schema update
+HHH000102: Fetching database metadata
+HHH000396: Updating schema
+HHH000261: Table found: my_bigdata.daily_plan
+HHH000037: Columns: [create_by, descr, last_modified_time, scores, id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.daily_plan_item
+HHH000037: Columns: [create_by, plan_time, finish_type, last_modified_time, finish_descr, id, last_modified_by, item_content, priority, create_date, plan_id, finish_time]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.knowledge_point
+HHH000037: Columns: [create_by, last_modified_time, point_content, id, topic_id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.knowledge_topic
+HHH000037: Columns: [create_by, last_modified_time, topic_name, parent_topic_id, topic_descr, id, topic_id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.sequence_records
+HHH000037: Columns: [create_by, sequence_count, sequence_type, last_modified_time, sequence_val, id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.users
+HHH000037: Columns: [create_by, user_type, last_modified_time, user_name, user_age, id, user_job, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000232: Schema update complete
+HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+HHH000412: Hibernate Core {4.1.7.Final}
+HHH000206: hibernate.properties not found
+HHH000021: Bytecode provider name : javassist
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+HHH000397: Using ASTQueryTranslatorFactory
+HHH000228: Running hbm2ddl schema update
+HHH000102: Fetching database metadata
+HHH000396: Updating schema
+HHH000261: Table found: my_bigdata.daily_plan
+HHH000037: Columns: [create_by, descr, last_modified_time, scores, id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.daily_plan_item
+HHH000037: Columns: [create_by, plan_time, finish_type, last_modified_time, finish_descr, id, last_modified_by, item_content, priority, create_date, plan_id, finish_time]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.knowledge_point
+HHH000037: Columns: [create_by, last_modified_time, point_content, id, topic_id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.knowledge_topic
+HHH000037: Columns: [create_by, last_modified_time, topic_name, parent_topic_id, topic_descr, id, topic_id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.sequence_records
+HHH000037: Columns: [create_by, sequence_count, sequence_type, last_modified_time, sequence_val, id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.users
+HHH000037: Columns: [create_by, user_type, last_modified_time, user_name, user_age, id, user_job, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000232: Schema update complete
+HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+HHH000412: Hibernate Core {4.1.7.Final}
+HHH000206: hibernate.properties not found
+HHH000021: Bytecode provider name : javassist
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+HHH000397: Using ASTQueryTranslatorFactory
+HHH000228: Running hbm2ddl schema update
+HHH000102: Fetching database metadata
+HHH000396: Updating schema
+HHH000261: Table found: my_bigdata.daily_plan
+HHH000037: Columns: [create_by, descr, last_modified_time, scores, id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.daily_plan_item
+HHH000037: Columns: [create_by, plan_time, finish_type, last_modified_time, finish_descr, id, last_modified_by, item_content, priority, create_date, plan_id, finish_time]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.knowledge_point
+HHH000037: Columns: [create_by, last_modified_time, point_content, id, topic_id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.knowledge_topic
+HHH000037: Columns: [create_by, last_modified_time, topic_name, parent_topic_id, topic_descr, id, topic_id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.sequence_records
+HHH000037: Columns: [create_by, sequence_count, sequence_type, last_modified_time, sequence_val, id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.users
+HHH000037: Columns: [create_by, user_type, last_modified_time, user_name, user_age, id, user_job, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000232: Schema update complete
+HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+HHH000412: Hibernate Core {4.1.7.Final}
+HHH000206: hibernate.properties not found
+HHH000021: Bytecode provider name : javassist
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+HHH000397: Using ASTQueryTranslatorFactory
+HHH000228: Running hbm2ddl schema update
+HHH000102: Fetching database metadata
+HHH000396: Updating schema
+HHH000261: Table found: my_bigdata.daily_plan
+HHH000037: Columns: [create_by, descr, last_modified_time, scores, id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.daily_plan_item
+HHH000037: Columns: [create_by, plan_time, finish_type, last_modified_time, finish_descr, id, last_modified_by, item_content, priority, create_date, plan_id, finish_time]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.knowledge_point
+HHH000037: Columns: [create_by, last_modified_time, point_content, id, topic_id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.knowledge_topic
+HHH000037: Columns: [create_by, last_modified_time, topic_name, parent_topic_id, topic_descr, id, topic_id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.sequence_records
+HHH000037: Columns: [create_by, sequence_count, sequence_type, last_modified_time, sequence_val, id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.users
+HHH000037: Columns: [create_by, user_type, last_modified_time, user_name, user_age, id, user_job, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000232: Schema update complete
+HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+HHH000412: Hibernate Core {4.1.7.Final}
+HHH000206: hibernate.properties not found
+HHH000021: Bytecode provider name : javassist
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+HHH000397: Using ASTQueryTranslatorFactory
+HHH000228: Running hbm2ddl schema update
+HHH000102: Fetching database metadata
+HHH000396: Updating schema
+HHH000261: Table found: my_bigdata.daily_plan
+HHH000037: Columns: [create_by, descr, last_modified_time, scores, id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.daily_plan_item
+HHH000037: Columns: [create_by, plan_time, finish_type, last_modified_time, finish_descr, id, last_modified_by, item_content, priority, create_date, plan_id, finish_time]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.knowledge_point
+HHH000037: Columns: [create_by, last_modified_time, point_content, id, topic_id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.knowledge_topic
+HHH000037: Columns: [create_by, last_modified_time, topic_name, parent_topic_id, topic_descr, id, topic_id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.sequence_records
+HHH000037: Columns: [create_by, sequence_count, sequence_type, last_modified_time, sequence_val, id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.users
+HHH000037: Columns: [create_by, user_type, last_modified_time, user_name, user_age, id, user_job, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000232: Schema update complete
+HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+HHH000412: Hibernate Core {4.1.7.Final}
+HHH000206: hibernate.properties not found
+HHH000021: Bytecode provider name : javassist
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+HHH000397: Using ASTQueryTranslatorFactory
+HHH000228: Running hbm2ddl schema update
+HHH000102: Fetching database metadata
+HHH000396: Updating schema
+HHH000261: Table found: my_bigdata.daily_plan
+HHH000037: Columns: [create_by, descr, last_modified_time, scores, id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.daily_plan_item
+HHH000037: Columns: [create_by, plan_time, finish_type, last_modified_time, finish_descr, id, last_modified_by, item_content, priority, create_date, plan_id, finish_time]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.knowledge_point
+HHH000037: Columns: [create_by, last_modified_time, point_content, id, topic_id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.knowledge_topic
+HHH000037: Columns: [create_by, last_modified_time, topic_name, parent_topic_id, topic_descr, id, topic_id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.sequence_records
+HHH000037: Columns: [create_by, sequence_count, sequence_type, last_modified_time, sequence_val, id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.users
+HHH000037: Columns: [create_by, user_type, last_modified_time, user_name, user_age, id, user_job, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000232: Schema update complete
+HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+HHH000412: Hibernate Core {4.1.7.Final}
+HHH000206: hibernate.properties not found
+HHH000021: Bytecode provider name : javassist
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+HHH000397: Using ASTQueryTranslatorFactory
+HHH000228: Running hbm2ddl schema update
+HHH000102: Fetching database metadata
+HHH000396: Updating schema
+HHH000261: Table found: my_bigdata.daily_plan
+HHH000037: Columns: [create_by, descr, last_modified_time, scores, id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.daily_plan_item
+HHH000037: Columns: [create_by, plan_time, finish_type, last_modified_time, finish_descr, id, last_modified_by, item_content, priority, create_date, plan_id, finish_time]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.knowledge_point
+HHH000037: Columns: [create_by, last_modified_time, point_content, id, topic_id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.knowledge_topic
+HHH000037: Columns: [create_by, last_modified_time, topic_name, parent_topic_id, topic_descr, id, topic_id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.sequence_records
+HHH000037: Columns: [create_by, sequence_count, sequence_type, last_modified_time, sequence_val, id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.users
+HHH000037: Columns: [create_by, user_type, last_modified_time, user_name, user_age, id, user_job, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000232: Schema update complete
+HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+HHH000412: Hibernate Core {4.1.7.Final}
+HHH000206: hibernate.properties not found
+HHH000021: Bytecode provider name : javassist
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+HHH000397: Using ASTQueryTranslatorFactory
+HHH000228: Running hbm2ddl schema update
+HHH000102: Fetching database metadata
+HHH000396: Updating schema
+HHH000261: Table found: my_bigdata.daily_plan
+HHH000037: Columns: [create_by, descr, last_modified_time, scores, id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.daily_plan_item
+HHH000037: Columns: [create_by, plan_time, finish_type, last_modified_time, finish_descr, id, last_modified_by, item_content, priority, create_date, plan_id, finish_time]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.knowledge_point
+HHH000037: Columns: [create_by, last_modified_time, point_content, id, topic_id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.knowledge_topic
+HHH000037: Columns: [create_by, last_modified_time, topic_name, parent_topic_id, topic_descr, id, topic_id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.sequence_records
+HHH000037: Columns: [create_by, sequence_count, sequence_type, last_modified_time, sequence_val, id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.users
+HHH000037: Columns: [create_by, user_type, last_modified_time, user_name, user_age, id, user_job, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000232: Schema update complete
+HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+HHH000412: Hibernate Core {4.1.7.Final}
+HHH000206: hibernate.properties not found
+HHH000021: Bytecode provider name : javassist
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+HHH000397: Using ASTQueryTranslatorFactory
+HHH000228: Running hbm2ddl schema update
+HHH000102: Fetching database metadata
+HHH000396: Updating schema
+HHH000261: Table found: my_bigdata.daily_plan
+HHH000037: Columns: [create_by, descr, last_modified_time, scores, id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.daily_plan_item
+HHH000037: Columns: [create_by, plan_time, finish_type, last_modified_time, finish_descr, id, last_modified_by, item_content, priority, create_date, plan_id, finish_time]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.knowledge_point
+HHH000037: Columns: [create_by, last_modified_time, point_content, id, topic_id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.knowledge_topic
+HHH000037: Columns: [create_by, last_modified_time, topic_name, parent_topic_id, topic_descr, id, topic_id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.sequence_records
+HHH000037: Columns: [create_by, sequence_count, sequence_type, last_modified_time, sequence_val, id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.users
+HHH000037: Columns: [create_by, user_type, last_modified_time, user_name, user_age, id, user_job, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000232: Schema update complete
+HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+HHH000412: Hibernate Core {4.1.7.Final}
+HHH000206: hibernate.properties not found
+HHH000021: Bytecode provider name : javassist
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+HHH000397: Using ASTQueryTranslatorFactory
+HHH000228: Running hbm2ddl schema update
+HHH000102: Fetching database metadata
+HHH000396: Updating schema
+HHH000261: Table found: my_bigdata.daily_plan
+HHH000037: Columns: [create_by, descr, last_modified_time, scores, id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.daily_plan_item
+HHH000037: Columns: [create_by, plan_time, finish_type, last_modified_time, finish_descr, id, last_modified_by, item_content, priority, create_date, plan_id, finish_time]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.knowledge_point
+HHH000037: Columns: [create_by, last_modified_time, point_content, id, topic_id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.knowledge_topic
+HHH000037: Columns: [create_by, last_modified_time, topic_name, parent_topic_id, topic_descr, id, topic_id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.sequence_records
+HHH000037: Columns: [create_by, sequence_count, sequence_type, last_modified_time, sequence_val, id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.users
+HHH000037: Columns: [create_by, user_type, last_modified_time, user_name, user_age, id, user_job, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000232: Schema update complete
+HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+HHH000412: Hibernate Core {4.1.7.Final}
+HHH000206: hibernate.properties not found
+HHH000021: Bytecode provider name : javassist
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+HHH000397: Using ASTQueryTranslatorFactory
+HHH000228: Running hbm2ddl schema update
+HHH000102: Fetching database metadata
+HHH000396: Updating schema
+HHH000261: Table found: my_bigdata.daily_plan
+HHH000037: Columns: [create_by, descr, last_modified_time, scores, id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.daily_plan_item
+HHH000037: Columns: [create_by, plan_time, finish_type, last_modified_time, finish_descr, id, last_modified_by, item_content, priority, create_date, plan_id, finish_time]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.knowledge_point
+HHH000037: Columns: [create_by, last_modified_time, point_content, id, topic_id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.knowledge_topic
+HHH000037: Columns: [create_by, last_modified_time, topic_name, parent_topic_id, topic_descr, id, topic_id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.sequence_records
+HHH000037: Columns: [create_by, sequence_count, sequence_type, last_modified_time, sequence_val, id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.users
+HHH000037: Columns: [create_by, user_type, last_modified_time, user_name, user_age, id, user_job, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000232: Schema update complete
+HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+HHH000412: Hibernate Core {4.1.7.Final}
+HHH000206: hibernate.properties not found
+HHH000021: Bytecode provider name : javassist
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+HHH000397: Using ASTQueryTranslatorFactory
+HHH000228: Running hbm2ddl schema update
+HHH000102: Fetching database metadata
+HHH000396: Updating schema
+HHH000261: Table found: my_bigdata.daily_plan
+HHH000037: Columns: [create_by, descr, last_modified_time, scores, id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.daily_plan_item
+HHH000037: Columns: [create_by, plan_time, finish_type, last_modified_time, finish_descr, id, last_modified_by, item_content, priority, create_date, plan_id, finish_time]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.knowledge_point
+HHH000037: Columns: [create_by, last_modified_time, point_content, id, topic_id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.knowledge_topic
+HHH000037: Columns: [create_by, last_modified_time, topic_name, parent_topic_id, topic_descr, id, topic_id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.sequence_records
+HHH000037: Columns: [create_by, sequence_count, sequence_type, last_modified_time, sequence_val, id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.users
+HHH000037: Columns: [create_by, user_type, last_modified_time, user_name, user_age, id, user_job, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000232: Schema update complete
+HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+HHH000412: Hibernate Core {4.1.7.Final}
+HHH000206: hibernate.properties not found
+HHH000021: Bytecode provider name : javassist
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+HHH000397: Using ASTQueryTranslatorFactory
+HHH000228: Running hbm2ddl schema update
+HHH000102: Fetching database metadata
+HHH000396: Updating schema
+HHH000261: Table found: my_bigdata.daily_plan
+HHH000037: Columns: [create_by, descr, last_modified_time, scores, id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.daily_plan_item
+HHH000037: Columns: [create_by, plan_time, finish_type, last_modified_time, finish_descr, id, last_modified_by, item_content, priority, create_date, plan_id, finish_time]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.knowledge_point
+HHH000037: Columns: [create_by, last_modified_time, point_content, id, topic_id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.knowledge_topic
+HHH000037: Columns: [create_by, last_modified_time, topic_name, parent_topic_id, topic_descr, id, topic_id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.sequence_records
+HHH000037: Columns: [create_by, sequence_count, sequence_type, last_modified_time, sequence_val, id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.users
+HHH000037: Columns: [create_by, user_type, last_modified_time, user_name, user_age, id, user_job, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000232: Schema update complete
+HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+HHH000412: Hibernate Core {4.1.7.Final}
+HHH000206: hibernate.properties not found
+HHH000021: Bytecode provider name : javassist
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+HHH000397: Using ASTQueryTranslatorFactory
+HHH000228: Running hbm2ddl schema update
+HHH000102: Fetching database metadata
+HHH000396: Updating schema
+HHH000261: Table found: my_bigdata.daily_plan
+HHH000037: Columns: [create_by, descr, last_modified_time, scores, id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.daily_plan_item
+HHH000037: Columns: [create_by, plan_time, finish_type, last_modified_time, finish_descr, id, last_modified_by, item_content, priority, create_date, plan_id, finish_time]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.knowledge_point
+HHH000037: Columns: [create_by, last_modified_time, point_content, id, topic_id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.knowledge_topic
+HHH000037: Columns: [create_by, last_modified_time, topic_name, parent_topic_id, topic_descr, id, topic_id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.sequence_records
+HHH000037: Columns: [create_by, sequence_count, sequence_type, last_modified_time, sequence_val, id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.users
+HHH000037: Columns: [create_by, user_type, last_modified_time, user_name, user_age, id, user_job, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000232: Schema update complete
+HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+HHH000412: Hibernate Core {4.1.7.Final}
+HHH000206: hibernate.properties not found
+HHH000021: Bytecode provider name : javassist
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+HHH000397: Using ASTQueryTranslatorFactory
+HHH000228: Running hbm2ddl schema update
+HHH000102: Fetching database metadata
+HHH000396: Updating schema
+HHH000261: Table found: my_bigdata.daily_plan
+HHH000037: Columns: [create_by, descr, last_modified_time, scores, id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.daily_plan_item
+HHH000037: Columns: [create_by, plan_time, finish_type, last_modified_time, finish_descr, id, last_modified_by, item_content, priority, create_date, plan_id, finish_time]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.knowledge_point
+HHH000037: Columns: [create_by, last_modified_time, point_content, id, topic_id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.knowledge_topic
+HHH000037: Columns: [create_by, last_modified_time, topic_name, parent_topic_id, topic_descr, id, topic_id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.sequence_records
+HHH000037: Columns: [create_by, sequence_count, sequence_type, last_modified_time, sequence_val, id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.users
+HHH000037: Columns: [create_by, user_type, last_modified_time, user_name, user_age, id, user_job, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000232: Schema update complete
+HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+HHH000412: Hibernate Core {4.1.7.Final}
+HHH000206: hibernate.properties not found
+HHH000021: Bytecode provider name : javassist
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+HHH000397: Using ASTQueryTranslatorFactory
+HHH000228: Running hbm2ddl schema update
+HHH000102: Fetching database metadata
+HHH000396: Updating schema
+HHH000261: Table found: my_bigdata.daily_plan
+HHH000037: Columns: [create_by, descr, last_modified_time, scores, id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.daily_plan_item
+HHH000037: Columns: [create_by, plan_time, finish_type, last_modified_time, finish_descr, id, last_modified_by, item_content, priority, create_date, plan_id, finish_time]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.knowledge_point
+HHH000037: Columns: [create_by, last_modified_time, point_content, id, topic_id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.knowledge_topic
+HHH000037: Columns: [create_by, last_modified_time, topic_name, parent_topic_id, topic_descr, id, topic_id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.sequence_records
+HHH000037: Columns: [create_by, sequence_count, sequence_type, last_modified_time, sequence_val, id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.users
+HHH000037: Columns: [create_by, user_type, last_modified_time, user_name, user_age, id, user_job, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000232: Schema update complete
+HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+HHH000412: Hibernate Core {4.1.7.Final}
+HHH000206: hibernate.properties not found
+HHH000021: Bytecode provider name : javassist
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+HHH000397: Using ASTQueryTranslatorFactory
+HHH000228: Running hbm2ddl schema update
+HHH000102: Fetching database metadata
+HHH000396: Updating schema
+HHH000261: Table found: my_bigdata.daily_plan
+HHH000037: Columns: [create_by, descr, last_modified_time, scores, id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.daily_plan_item
+HHH000037: Columns: [create_by, plan_time, finish_type, last_modified_time, finish_descr, id, last_modified_by, item_content, priority, create_date, plan_id, finish_time]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.knowledge_point
+HHH000037: Columns: [create_by, last_modified_time, point_content, id, topic_id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.knowledge_topic
+HHH000037: Columns: [create_by, last_modified_time, topic_name, parent_topic_id, topic_descr, id, topic_id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.sequence_records
+HHH000037: Columns: [create_by, sequence_count, sequence_type, last_modified_time, sequence_val, id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.users
+HHH000037: Columns: [create_by, user_type, last_modified_time, user_name, user_age, id, user_job, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000232: Schema update complete
+HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+HHH000412: Hibernate Core {4.1.7.Final}
+HHH000206: hibernate.properties not found
+HHH000021: Bytecode provider name : javassist
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+HHH000397: Using ASTQueryTranslatorFactory
+HHH000228: Running hbm2ddl schema update
+HHH000102: Fetching database metadata
+HHH000396: Updating schema
+HHH000261: Table found: my_bigdata.daily_plan
+HHH000037: Columns: [create_by, descr, last_modified_time, scores, id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.daily_plan_item
+HHH000037: Columns: [create_by, plan_time, finish_type, last_modified_time, finish_descr, id, last_modified_by, item_content, priority, create_date, plan_id, finish_time]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.knowledge_point
+HHH000037: Columns: [create_by, last_modified_time, point_content, id, topic_id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.knowledge_topic
+HHH000037: Columns: [create_by, last_modified_time, topic_name, parent_topic_id, topic_descr, id, topic_id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.sequence_records
+HHH000037: Columns: [create_by, sequence_count, sequence_type, last_modified_time, sequence_val, id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.users
+HHH000037: Columns: [create_by, user_type, last_modified_time, user_name, user_age, id, user_job, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000232: Schema update complete
+HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+HHH000412: Hibernate Core {4.1.7.Final}
+HHH000206: hibernate.properties not found
+HHH000021: Bytecode provider name : javassist
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+HHH000397: Using ASTQueryTranslatorFactory
+HHH000228: Running hbm2ddl schema update
+HHH000102: Fetching database metadata
+HHH000396: Updating schema
+HHH000261: Table found: my_bigdata.daily_plan
+HHH000037: Columns: [create_by, descr, last_modified_time, scores, id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.daily_plan_item
+HHH000037: Columns: [create_by, plan_time, finish_type, last_modified_time, finish_descr, id, last_modified_by, item_content, priority, create_date, plan_id, finish_time]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.knowledge_point
+HHH000037: Columns: [create_by, last_modified_time, point_content, id, topic_id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.knowledge_topic
+HHH000037: Columns: [create_by, last_modified_time, topic_name, parent_topic_id, topic_descr, id, topic_id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.sequence_records
+HHH000037: Columns: [create_by, sequence_count, sequence_type, last_modified_time, sequence_val, id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.users
+HHH000037: Columns: [create_by, user_type, last_modified_time, user_name, user_age, id, user_job, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000232: Schema update complete
+HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+HHH000412: Hibernate Core {4.1.7.Final}
+HHH000206: hibernate.properties not found
+HHH000021: Bytecode provider name : javassist
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+HHH000397: Using ASTQueryTranslatorFactory
+HHH000228: Running hbm2ddl schema update
+HHH000102: Fetching database metadata
+HHH000396: Updating schema
+HHH000261: Table found: my_bigdata.daily_plan
+HHH000037: Columns: [create_by, descr, last_modified_time, scores, id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.daily_plan_item
+HHH000037: Columns: [create_by, plan_time, finish_type, last_modified_time, finish_descr, id, last_modified_by, item_content, priority, create_date, plan_id, finish_time]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.knowledge_point
+HHH000037: Columns: [create_by, last_modified_time, point_content, id, topic_id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.knowledge_topic
+HHH000037: Columns: [create_by, last_modified_time, topic_name, parent_topic_id, topic_descr, id, topic_id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.sequence_records
+HHH000037: Columns: [create_by, sequence_count, sequence_type, last_modified_time, sequence_val, id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.users
+HHH000037: Columns: [create_by, user_type, last_modified_time, user_name, user_age, id, user_job, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000232: Schema update complete
+HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+HHH000412: Hibernate Core {4.1.7.Final}
+HHH000206: hibernate.properties not found
+HHH000021: Bytecode provider name : javassist
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+HHH000397: Using ASTQueryTranslatorFactory
+HHH000228: Running hbm2ddl schema update
+HHH000102: Fetching database metadata
+HHH000396: Updating schema
+HHH000261: Table found: my_bigdata.daily_plan
+HHH000037: Columns: [create_by, descr, last_modified_time, scores, id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.daily_plan_item
+HHH000037: Columns: [create_by, plan_time, finish_type, last_modified_time, finish_descr, id, last_modified_by, item_content, priority, create_date, plan_id, finish_time]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.knowledge_point
+HHH000037: Columns: [create_by, last_modified_time, point_content, id, topic_id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.knowledge_topic
+HHH000037: Columns: [create_by, last_modified_time, topic_name, parent_topic_id, topic_descr, id, topic_id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.sequence_records
+HHH000037: Columns: [create_by, sequence_count, sequence_type, last_modified_time, sequence_val, id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.users
+HHH000037: Columns: [create_by, user_type, last_modified_time, user_name, user_age, id, user_job, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000232: Schema update complete
+HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+HHH000412: Hibernate Core {4.1.7.Final}
+HHH000206: hibernate.properties not found
+HHH000021: Bytecode provider name : javassist
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+HHH000397: Using ASTQueryTranslatorFactory
+HHH000228: Running hbm2ddl schema update
+HHH000102: Fetching database metadata
+HHH000396: Updating schema
+HHH000261: Table found: my_bigdata.daily_plan
+HHH000037: Columns: [create_by, descr, last_modified_time, scores, id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.daily_plan_item
+HHH000037: Columns: [create_by, plan_time, finish_type, last_modified_time, finish_descr, id, last_modified_by, item_content, priority, create_date, plan_id, finish_time]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.knowledge_point
+HHH000037: Columns: [create_by, last_modified_time, point_content, id, topic_id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.knowledge_topic
+HHH000037: Columns: [create_by, last_modified_time, topic_name, parent_topic_id, topic_descr, id, topic_id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.sequence_records
+HHH000037: Columns: [create_by, sequence_count, sequence_type, last_modified_time, sequence_val, id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.users
+HHH000037: Columns: [create_by, user_type, last_modified_time, user_name, user_age, id, user_job, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000232: Schema update complete
+HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+HHH000412: Hibernate Core {4.1.7.Final}
+HHH000206: hibernate.properties not found
+HHH000021: Bytecode provider name : javassist
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+HHH000397: Using ASTQueryTranslatorFactory
+HHH000228: Running hbm2ddl schema update
+HHH000102: Fetching database metadata
+HHH000396: Updating schema
+HHH000261: Table found: my_bigdata.daily_plan
+HHH000037: Columns: [create_by, descr, last_modified_time, scores, id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.daily_plan_item
+HHH000037: Columns: [create_by, plan_time, finish_type, last_modified_time, finish_descr, id, last_modified_by, item_content, priority, create_date, plan_id, finish_time]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.knowledge_point
+HHH000037: Columns: [create_by, last_modified_time, point_content, id, topic_id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.knowledge_topic
+HHH000037: Columns: [create_by, last_modified_time, topic_name, parent_topic_id, topic_descr, id, topic_id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.sequence_records
+HHH000037: Columns: [create_by, sequence_count, sequence_type, last_modified_time, sequence_val, id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.users
+HHH000037: Columns: [create_by, user_type, last_modified_time, user_name, user_age, id, user_job, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000232: Schema update complete
+HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+HHH000412: Hibernate Core {4.1.7.Final}
+HHH000206: hibernate.properties not found
+HHH000021: Bytecode provider name : javassist
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+HHH000397: Using ASTQueryTranslatorFactory
+HHH000228: Running hbm2ddl schema update
+HHH000102: Fetching database metadata
+HHH000396: Updating schema
+HHH000261: Table found: my_bigdata.daily_plan
+HHH000037: Columns: [create_by, descr, last_modified_time, scores, id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.daily_plan_item
+HHH000037: Columns: [create_by, plan_time, finish_type, last_modified_time, finish_descr, id, last_modified_by, item_content, priority, create_date, plan_id, finish_time]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.knowledge_point
+HHH000037: Columns: [create_by, last_modified_time, point_content, id, topic_id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.knowledge_topic
+HHH000037: Columns: [create_by, last_modified_time, topic_name, parent_topic_id, topic_descr, id, topic_id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.sequence_records
+HHH000037: Columns: [create_by, sequence_count, sequence_type, last_modified_time, sequence_val, id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.users
+HHH000037: Columns: [create_by, user_type, last_modified_time, user_name, user_age, id, user_job, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000232: Schema update complete
+HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+HHH000412: Hibernate Core {4.1.7.Final}
+HHH000206: hibernate.properties not found
+HHH000021: Bytecode provider name : javassist
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+HHH000397: Using ASTQueryTranslatorFactory
+HHH000228: Running hbm2ddl schema update
+HHH000102: Fetching database metadata
+HHH000396: Updating schema
+HHH000261: Table found: my_bigdata.daily_plan
+HHH000037: Columns: [create_by, descr, last_modified_time, scores, id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.daily_plan_item
+HHH000037: Columns: [create_by, plan_time, finish_type, last_modified_time, finish_descr, id, last_modified_by, item_content, priority, create_date, plan_id, finish_time]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.knowledge_point
+HHH000037: Columns: [create_by, last_modified_time, point_content, id, topic_id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.knowledge_topic
+HHH000037: Columns: [create_by, last_modified_time, topic_name, parent_topic_id, topic_descr, id, topic_id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.sequence_records
+HHH000037: Columns: [create_by, sequence_count, sequence_type, last_modified_time, sequence_val, id, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000261: Table found: my_bigdata.users
+HHH000037: Columns: [create_by, user_type, last_modified_time, user_name, user_age, id, user_job, last_modified_by, create_date]
+HHH000108: Foreign keys: []
+HHH000126: Indexes: [primary]
+HHH000232: Schema update complete
+HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+HHH000412: Hibernate Core {4.1.7.Final}
+HHH000206: hibernate.properties not found
+HHH000021: Bytecode provider name : javassist
+HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+HHH000130: Instantiating explicit connection provider: org.hibernate.ejb.connection.InjectedDataSourceConnectionProvider
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+HHH000397: Using ASTQueryTranslatorFactory
+HHH000228: Running hbm2ddl schema update
+HHH000102: Fetching database metadata
+HHH000396: Updating schema
+HHH000261: Table found: my_bigdata.daily_plan
+HHH000037: Columns: [create_by, descr, last_modified_time, scores, id, last_modified_by, create_date]
 HHH000108: Foreign keys: []
 HHH000126: Indexes: [primary]
 HHH000261: Table found: my_bigdata.daily_plan_item

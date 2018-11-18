@@ -1,6 +1,6 @@
 package com.ck.orm.dao;
 
-import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
 
 import java.util.Date;
 
@@ -21,8 +21,17 @@ public class DailyPlanDaoTest extends BaseDaoTest<DailyPlanPo, DailyPlanDao>{
 	@Transactional
 	public void testGetPlanByRange() {
 		testSave();
-		Pageable page = new PageRequest(1, 5);
-		assertNotNull((dao.getPlanByRange("ck", DateUtils.addDays(new Date(), -1), new Date(), page)));
+		Pageable page = new PageRequest(0, 5);
+		assertTrue(1==(dao.getPlanByRange("ck", DateUtils.addDays(new Date(), -2), new Date(), page)).getTotalElements());
+	}
+	
+	@Test
+	@Rollback(true)
+	@Transactional
+	public void testGetPlanByPage() {
+		testSave();
+		Pageable page = new PageRequest(0, 5);
+		assertTrue(1==(dao.getPlanByPage("ck", page)).getTotalElements());
 	}
 
 	@Override
@@ -30,7 +39,7 @@ public class DailyPlanDaoTest extends BaseDaoTest<DailyPlanPo, DailyPlanDao>{
 		DailyPlanPo plan = new DailyPlanPo();
 		plan.setId("1");
 		plan.setCreateBy("ck");
-		plan.setCreateDate(new Date());
+		plan.setCreateDate(DateUtils.addDays(new Date(), -1));
 		dao.saveAndFlush(plan);
 	}
 

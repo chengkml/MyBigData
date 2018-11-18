@@ -3,11 +3,12 @@ package com.ck.domain;
 import java.util.Date;
 import java.util.List;
 
+import org.springframework.data.domain.Page;
+
 import com.ck.domain.base.BaseModel;
+import com.ck.repository.DailyPlanItemRepository;
 import com.ck.repository.DailyPlanRepository;
-import com.ck.service.DailyPlanService;
 import com.ck.util.BeanFactory;
-import com.ck.vo.DailyPlanVo;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -30,13 +31,19 @@ public class User extends BaseModel{
 	
 	private List<KnowledgePoint> points;
 	
-	public List<DailyPlanVo> getPlansByRange(Date startDate, Date endDate, int page, int size) {
-		return BeanFactory.getBean(DailyPlanService.class).modelsToVos(BeanFactory.getBean(
-				DailyPlanRepository.class).getPlanByRange(name, startDate, endDate, page, size));
+	public Page<DailyPlan> getPlansByRange(Date startDate, Date endDate, int page, int size) {
+		return BeanFactory.getBean(DailyPlanRepository.class).getPlanByRange(name, startDate, endDate, page, size);
 	}
 	
-	public List<DailyPlanVo> getPlansByPage(int page, int size) {
-		return BeanFactory.getBean(DailyPlanService.class).modelsToVos(BeanFactory.getBean(
-				DailyPlanRepository.class).getPlanByPage(name, page, size));
+	public Page<DailyPlan> getPlansByPage(int page, int size) {
+		return BeanFactory.getBean(DailyPlanRepository.class).getPlanByPage(name, page, size);
+	}
+	
+	public Page<DailyPlanItem> getPlanItemsByRange(Date startDate, Date endDate, int page, int size) {
+		return BeanFactory.getBean(DailyPlanItemRepository.class).getPlanItemByRange(name, startDate, endDate, page, size);
+	}
+	
+	public Page<DailyPlanItem> getPlanItemsByPage(int page, int size) {
+		return BeanFactory.getBean(DailyPlanItemRepository.class).getPlanItemByPage(name, page, size);
 	}
 }

@@ -22,7 +22,6 @@
 	>
 
 	<description>SpringJpa配置</description>
-
 	<!-- 如果spring用了jpa，并且类型为LocalContainerEntityManagerFactoryBean，则组件注册在此配置文件出现即可，其余配置文件可忽略 
 		使用component来替代annotation 自动注册bean, 并保证@Required、@Autowired的属性被注入\ -->
 	<context:component-scan base-package="com.ck" />
@@ -106,8 +105,8 @@
 				<prop key="hibernate.jdbc.fetch_size">18</prop>
 				<prop key="hibernate.jdbc.batch_size">10</prop>
 				<prop key="hibernate.hbm2ddl.auto">update</prop>
-				<prop key="hibernate.show_sql">true</prop>
-				<prop key="hibernate.format_sql">true</prop>
+				<prop key="hibernate.show_sql">false</prop>
+				<prop key="hibernate.format_sql">false</prop>
 				<prop key="javax.persistence.validation.mode">none</prop>
 			</props>
 		</property>

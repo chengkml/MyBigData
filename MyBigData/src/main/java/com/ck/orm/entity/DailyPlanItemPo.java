@@ -33,8 +33,14 @@ public class DailyPlanItemPo extends BasePo{
 	private Date finishTime;
 	
 	@Column(name="finish_type")
-	private Short finishType;
+	private Integer finishType;
 	
 	@Column(name="finish_descr",length=4096)
 	private String finishDescr;
+	
+	@Column(name="start_time")
+	private Date startTime;
+	
+	@Column(name="remindOn")
+	private Integer remindOn;
 }

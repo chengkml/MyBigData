@@ -10,6 +10,8 @@ import lombok.EqualsAndHashCode;
 @EqualsAndHashCode(callSuper=false)
 public class DailyPlan extends BaseModel{
 	
+	private String title;
+	
 	private Integer scores;
 	
 	private String descr;

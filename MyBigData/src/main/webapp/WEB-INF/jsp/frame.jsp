@@ -6,6 +6,7 @@
 <meta charset="UTF-8">
 <title>我的大数据</title>
 <link rel="stylesheet" href="static/css/element-ui.css">
+<link rel="stylesheet" href="static/css/frame.css">
 <script type="text/javascript" src="static/js/vue.js"></script> 
 <script type="text/javascript" src="static/js/element-ui.js"></script>
 <script type="text/javascript" src="static/js/jquery.js"></script>
@@ -30,17 +31,6 @@
 			 </el-container>
 		</el-container>
 	</div>
-	<style>
-	  .el-header {
-	    background-color: #B3C0D1;
-	    color: #333;
-	    line-height: 60px;
-	  }
-	  
-	  .el-aside {
-	    color: #333;
-	  }
-	</style>
 	<script type="text/javascript">
 		var vm = new Vue({
 			el:'#app',
@@ -51,8 +41,36 @@
 				parentMenus:[
 					{
 						index:1,
-						menuLabel:'计划任务',
+						menuLabel:'工作计划',
 						menuCode:'plan',
+						url:'',
+						parent:null
+					},
+					{
+						index:2,
+						menuLabel:'知识积累',
+						menuCode:'knowledge',
+						url:'',
+						parent:null
+					},
+					{
+						index:3,
+						menuLabel:'长远规划',
+						menuCode:'targets',
+						url:'',
+						parent:null
+					},
+					{
+						index:4,
+						menuLabel:'自我管控',
+						menuCode:'selfControl',
+						url:'',
+						parent:null
+					},
+					{
+						index:1,
+						menuLabel:'统计分析',
+						menuCode:'stastics',
 						url:'',
 						parent:null
 					}
@@ -62,14 +80,21 @@
 						index:1,
 						menuLabel:'我的计划',
 						menuCode:'my_plan',
-						url:'myPlan.do',
+						url:'myPlan',
 						parent:null
 					},
 					{
-						index:1,
+						index:2,
+						menuLabel:'正在执行',
+						menuCode:'runningPlan',
+						url:'',
+						parent:null
+					},
+					{
+						index:3,
 						menuLabel:'今日计划',
-						menuCode:'plan_today',
-						url:'planToday',
+						menuCode:'planToday',
+						url:'',
 						parent:null
 					}
 				]

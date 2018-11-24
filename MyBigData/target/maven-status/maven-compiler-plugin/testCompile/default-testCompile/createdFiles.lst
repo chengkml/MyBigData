@@ -11,8 +11,10 @@ com\ck\service\UserServiceTest.class
 com\ck\base\SpringJunitTestBase.class
 com\ck\orm\dao\KnowledgeTopicDaoTest.class
 com\ck\repository\DailyPlanRepositoryTest.class
+com\ck\domain\base\BaseModelTest.class
 com\ck\service\SequenceServiceTest.class
 com\ck\repository\KnowledgeTopicRepositoryTest.class
 com\ck\orm\dao\UserDaoTest.class
+com\ck\domain\UserTest.class
 com\ck\repository\UserRepositoryTest.class
 com\ck\orm\dao\KnowledgePointDaoTest.class

@@ -18,4 +18,7 @@ public interface DailyPlanDao extends BaseDao<DailyPlanPo>{
 
 	@Query("from DailyPlanPo p where p.createBy=:name order by p.createDate")
 	public Page<DailyPlanPo> getPlanByPage(@Param("name") String name, Pageable page);
+	
+	@Query("from DailyPlanPo p where p.createBy=:name and p.title=:title")
+	public DailyPlanPo getPlanByTitle(@Param("name") String name, @Param("title") String title);	
 }

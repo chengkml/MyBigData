@@ -6,6 +6,7 @@ import java.util.UUID;
 import org.springframework.stereotype.Service;
 
 import com.ck.domain.Sequence;
+import com.ck.enums.ObjectTypeEnum;
 import com.ck.orm.dao.SequenceDao;
 import com.ck.orm.entity.SequencePo;
 import com.ck.repository.SequenceRepository;
@@ -19,6 +20,14 @@ import com.ck.vo.SeqVo;
  */
 @Service
 public class SequenceService extends BaseService<SequenceDao, SequenceRepository, SequencePo, Sequence, SeqVo>{
+	
+	public String getPlanSeq(String userId) {
+		return getSeq(userId, ObjectTypeEnum.PLAN.getType());
+	}
+	
+	public String getPlanItemSeq(String userId) {
+		return getSeq(userId, ObjectTypeEnum.PLAN_ITEM.getType());
+	}
 	
 	/**
 	 * 生成唯一标识

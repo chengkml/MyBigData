@@ -4,11 +4,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.ck.controller.base.ControllerBase;
+import com.ck.controller.base.BaseController;
 
 @Controller
 @RequestMapping
-public class RouterController extends ControllerBase{
+public class RouterController extends BaseController{
 	
 	@RequestMapping(value="/myPlan",method=RequestMethod.GET)
 	public String myPlan() {

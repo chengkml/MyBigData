@@ -11,6 +11,8 @@ import lombok.EqualsAndHashCode;
 public class DailyPlanVo extends BaseVo{
 	
 	private static final long serialVersionUID = 1L;
+	
+	private String title;
 
 	private Integer scores;
 

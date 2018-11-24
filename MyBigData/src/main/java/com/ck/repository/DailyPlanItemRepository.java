@@ -52,13 +52,54 @@ public class DailyPlanItemRepository extends BaseRepository<DailyPlanItemDao, Da
 		return posToModels(dao.findByPlanId(planId));
 	}
 	
+	/**
+	 * 按日期区间分页查询计划项
+	 * @param name
+	 * @param startDate
+	 * @param endDate
+	 * @param page
+	 * @param size
+	 * @return
+	 */
 	public Page<DailyPlanItem> getPlanItemByRange(String name, Date startDate, Date endDate, int page, int size){
 		Page<DailyPlanItemPo> planPage = dao.getPlanItemByRange(name, startDate, DateUtils.addDays(endDate, 1), new PageRequest(page, size));
 		return new PageImpl<>(posToModels(planPage.getContent()),new PageRequest(page, size),planPage.getTotalElements());
 	}
 	
+	/**
+	 * 按页查询计划项
+	 * @param name
+	 * @param page
+	 * @param size
+	 * @return
+	 */
 	public Page<DailyPlanItem> getPlanItemByPage(String name, int page, int size){
 		Page<DailyPlanItemPo> planPage = dao.getPlanItemByPage(name, new PageRequest(page, size));
 		return new PageImpl<>(posToModels(planPage.getContent()),new PageRequest(page, size),planPage.getTotalElements());
 	}
+
+	public Page<DailyPlanItem> getPlanItemByRange(String name, Date start, Date end, int page, int size, Integer state,
+			String key) {
+		Page<DailyPlanItemPo> planPage = dao.getPlanItemByConds(name, start, DateUtils.addDays(end, 1), state,
+				"%"+key+"%", new PageRequest(page, size));
+		return new PageImpl<>(posToModels(planPage.getContent()),new PageRequest(page, size),planPage.getTotalElements());
+	}
+
+	public Page<DailyPlanItem> getPlanItemByPage(String name, int page, int size, Integer state, String key) {
+		Page<DailyPlanItemPo> planPage = dao.getPlanItemByConds(name, state, "%"+key+"%", 
+				new PageRequest(page, size));
+		return new PageImpl<>(posToModels(planPage.getContent()),new PageRequest(page, size),planPage.getTotalElements());
+	}
+	
+	public Page<DailyPlanItem> getPlanItemByRange(String name, Date start, Date end, int page, int size, String key) {
+		Page<DailyPlanItemPo> planPage = dao.getPlanItemByConds(name, start, DateUtils.addDays(end, 1),
+				"%"+key+"%", new PageRequest(page, size));
+		return new PageImpl<>(posToModels(planPage.getContent()),new PageRequest(page, size),planPage.getTotalElements());
+	}
+
+	public Page<DailyPlanItem> getPlanItemByPage(String name, int page, int size, String key) {
+		Page<DailyPlanItemPo> planPage = dao.getPlanItemByConds(name, "%"+key+"%", new PageRequest(page, size));
+		return new PageImpl<>(posToModels(planPage.getContent()),new PageRequest(page, size),planPage.getTotalElements());
+	}
+	
 }

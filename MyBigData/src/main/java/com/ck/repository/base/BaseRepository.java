@@ -7,6 +7,7 @@ import javax.annotation.PostConstruct;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.ck.orm.dao.base.BaseDao;
 /**
@@ -41,6 +42,16 @@ public abstract class BaseRepository<D extends BaseDao<P>, P, M> {
 			}
 		}
 		return models;
+	}
+	
+	public List<P> modelsToPos(List<M> ms){
+		List<P> pos = new ArrayList<>();
+		if(null!=ms && !ms.isEmpty()) {
+			for(M m : ms) {
+				pos.add(modelToPo(m));
+			}
+		}
+		return pos;
 	}
 	
 	/**
@@ -81,4 +92,34 @@ public abstract class BaseRepository<D extends BaseDao<P>, P, M> {
 		}
 	}
 	
+	/**
+	 * 批量保存模型
+	 * @param ms
+	 */
+	@Transactional
+	public void saveModels(List<M> ms) {
+		dao.save(modelsToPos(ms));
+	}
+	
+	/**
+	 * 删除模型
+	 * @param m
+	 */
+	@Transactional
+	public void deleteModel (M m) {
+		dao.delete(modelToPo(m));
+	}
+	
+	/**
+	 * 批量删除模型
+	 * @param ms
+	 */
+	@Transactional
+	public void deleteModels (List<M> ms) {
+		List<P> pos = new ArrayList<>();
+		for(M m : ms) {
+			pos.add(modelToPo(m));
+		}
+		dao.delete(pos);
+	}
 }

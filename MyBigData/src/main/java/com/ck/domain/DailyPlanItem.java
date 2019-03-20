@@ -29,7 +29,4 @@ public class DailyPlanItem extends BaseModel{
 	
 	private Integer remindOn;
 	
-	public boolean checkFinished() {
-		return FinishTypeEnum.FINISH.getValue()==finishType;
-	}
 }

@@ -1,19 +1,27 @@
 package com.ck.repository;
 
-import java.util.Date;
+import java.text.ParseException;
+import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.commons.lang.time.DateUtils;
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
+import org.apache.commons.lang.StringUtils;
+import org.apache.ibatis.session.SqlSession;
+import org.apache.ibatis.session.SqlSessionFactory;
 import org.springframework.beans.BeanUtils;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageImpl;
-import org.springframework.data.domain.PageRequest;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.ck.domain.DailyPlanItem;
 import com.ck.orm.dao.DailyPlanItemDao;
 import com.ck.orm.entity.DailyPlanItemPo;
+import com.ck.orm.mapper.inf.DailyPlanItemMapper;
 import com.ck.repository.base.BaseRepository;
+import com.ck.util.MyDateUtils;
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 /**
  * @Title:计划项Repo
  * @author:Chengk
@@ -22,6 +30,26 @@ import com.ck.repository.base.BaseRepository;
  */
 @Repository
 public class DailyPlanItemRepository extends BaseRepository<DailyPlanItemDao, DailyPlanItemPo, DailyPlanItem>{
+	
+	@Autowired
+	private SqlSessionFactory factory;
+	
+	private SqlSession session;
+	
+	private DailyPlanItemMapper mDao;
+	
+	@PostConstruct
+	private void openSession() {
+		session = factory.openSession();
+		mDao = session.getMapper(DailyPlanItemMapper.class);
+	}
+	
+	@PreDestroy
+	private void closeSession() {
+		if(null!=session) {
+			session.close();
+		}
+	}
 	
 	@Override
 	public DailyPlanItem poToModel(DailyPlanItemPo po) {
@@ -51,55 +79,33 @@ public class DailyPlanItemRepository extends BaseRepository<DailyPlanItemDao, Da
 	public List<DailyPlanItem> findByPlanId(String planId) {
 		return posToModels(dao.findByPlanId(planId));
 	}
-	
+
 	/**
-	 * 按日期区间分页查询计划项
+	 * 按条件搜索计划项
 	 * @param name
-	 * @param startDate
-	 * @param endDate
-	 * @param page
+	 * @param start
+	 * @param end
+	 * @param pageNum
 	 * @param size
+	 * @param state
+	 * @param key
 	 * @return
 	 */
-	public Page<DailyPlanItem> getPlanItemByRange(String name, Date startDate, Date endDate, int page, int size){
-		Page<DailyPlanItemPo> planPage = dao.getPlanItemByRange(name, startDate, DateUtils.addDays(endDate, 1), new PageRequest(page, size));
-		return new PageImpl<>(posToModels(planPage.getContent()),new PageRequest(page, size),planPage.getTotalElements());
-	}
-	
-	/**
-	 * 按页查询计划项
-	 * @param name
-	 * @param page
-	 * @param size
-	 * @return
-	 */
-	public Page<DailyPlanItem> getPlanItemByPage(String name, int page, int size){
-		Page<DailyPlanItemPo> planPage = dao.getPlanItemByPage(name, new PageRequest(page, size));
-		return new PageImpl<>(posToModels(planPage.getContent()),new PageRequest(page, size),planPage.getTotalElements());
-	}
-
-	public Page<DailyPlanItem> getPlanItemByRange(String name, Date start, Date end, int page, int size, Integer state,
-			String key) {
-		Page<DailyPlanItemPo> planPage = dao.getPlanItemByConds(name, start, DateUtils.addDays(end, 1), state,
-				"%"+key+"%", new PageRequest(page, size));
-		return new PageImpl<>(posToModels(planPage.getContent()),new PageRequest(page, size),planPage.getTotalElements());
-	}
-
-	public Page<DailyPlanItem> getPlanItemByPage(String name, int page, int size, Integer state, String key) {
-		Page<DailyPlanItemPo> planPage = dao.getPlanItemByConds(name, state, "%"+key+"%", 
-				new PageRequest(page, size));
-		return new PageImpl<>(posToModels(planPage.getContent()),new PageRequest(page, size),planPage.getTotalElements());
-	}
-	
-	public Page<DailyPlanItem> getPlanItemByRange(String name, Date start, Date end, int page, int size, String key) {
-		Page<DailyPlanItemPo> planPage = dao.getPlanItemByConds(name, start, DateUtils.addDays(end, 1),
-				"%"+key+"%", new PageRequest(page, size));
-		return new PageImpl<>(posToModels(planPage.getContent()),new PageRequest(page, size),planPage.getTotalElements());
-	}
-
-	public Page<DailyPlanItem> getPlanItemByPage(String name, int page, int size, String key) {
-		Page<DailyPlanItemPo> planPage = dao.getPlanItemByConds(name, "%"+key+"%", new PageRequest(page, size));
-		return new PageImpl<>(posToModels(planPage.getContent()),new PageRequest(page, size),planPage.getTotalElements());
+	public PageInfo<DailyPlanItem> selectPlanItemsByConds(String start, String end, 
+			Integer state, String key, String createBy, int pageNum, int size) {
+		PageHelper.startPage(pageNum,size);
+		if(StringUtils.isNotBlank(key)) {
+			key = "%"+key+"%";
+		}
+		List<DailyPlanItemPo> list = new ArrayList<>();
+		try {
+			list = mDao.selectPlanItemsByConds(MyDateUtils.parseDate(start), 
+					MyDateUtils.parseDate(end), key, state, 
+					createBy);
+		} catch (ParseException e) {
+			throw new RuntimeException(e);
+		}
+		return new PageInfo<>(posToModels(list));
 	}
 	
 }

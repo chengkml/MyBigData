@@ -12,12 +12,18 @@ public abstract class BaseRepositoryTest<R extends BaseRepository<D,P,M>, D exte
 	@Autowired
 	public BaseRepository<D,P,M> pRepo;
 	
+	@Autowired
+	protected BaseDao<P> pDao;
+	
+	protected D dao;
+	
 	protected R repo;
 	
-	@SuppressWarnings("unchecked")
 	@PostConstruct
-	private void convertDao() {
+	@SuppressWarnings("unchecked")
+	private void convert() {
 		repo = (R)pRepo;
+		dao = (D)pDao;
 	}
 	
 }

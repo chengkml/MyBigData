@@ -27,7 +27,7 @@ public abstract class BaseDaoTest<P, D> extends SpringJunitTestBase{
 	
 	@SuppressWarnings("unchecked")
 	@PostConstruct
-	private void convertDao() {
+	private void convert() {
 		dao = (D)pDao;
 	}
 }

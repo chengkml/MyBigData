@@ -11,13 +11,13 @@ import com.ck.orm.dao.SequenceDao;
 import com.ck.orm.entity.SequencePo;
 import com.ck.repository.SequenceRepository;
 import com.ck.service.base.BaseServiceTest;
-import com.ck.vo.SeqVo;
 
-public class SequenceServiceTest extends BaseServiceTest<SequenceService, SequenceRepository, SequenceDao, SequencePo, Sequence, SeqVo>{
+public class SequenceServiceTest extends BaseServiceTest<SequenceService, SequenceRepository, SequenceDao, SequencePo, Sequence>{
+	
 	@Test
 	@Transactional
-	@Rollback
+	@Rollback(true)
 	public void testGetSeq() {
-		assertEquals(serv.getSeq("ck", "test"), "ck_test_1");
+		assertEquals("ck_test_1", serv.getSeq("ck", "test"));
 	}
 }

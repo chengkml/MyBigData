@@ -53,10 +53,11 @@ public class DailyPlanRepository extends BaseRepository<DailyPlanDao, DailyPlanP
 	
 	@Override
 	@Transactional
-	public void saveModel(DailyPlan m) {
+	public DailyPlan saveModel(DailyPlan m) {
 		super.saveModel(m);
 		List<DailyPlanItem> items = m.getPlanItems();
 		planItemRepo.saveModels(items);
+		return m;
 	}
 
 	@Override
@@ -70,25 +71,6 @@ public class DailyPlanRepository extends BaseRepository<DailyPlanDao, DailyPlanP
 		planItemRepo.saveModels(items);
 	}
 	
-	@Override
-	@Transactional
-	public void deleteModel(DailyPlan m) {
-		planItemRepo.deleteModels(m.getPlanItems());
-		super.deleteModel(m);
-		
-	}
-
-	@Override
-	@Transactional
-	public void deleteModels(List<DailyPlan> ms) {
-		List<DailyPlanItem> items = new ArrayList<>();
-		for(DailyPlan plan : ms) {
-			items.addAll(plan.getPlanItems());
-		}
-		planItemRepo.saveModels(items);
-		super.deleteModels(ms);
-	}
-
 	/**
 	 * 根据时间区间按页查询计划
 	 * @param start

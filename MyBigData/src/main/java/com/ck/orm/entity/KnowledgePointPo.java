@@ -15,8 +15,8 @@ import lombok.EqualsAndHashCode;
 @EqualsAndHashCode(callSuper=false)
 public class KnowledgePointPo extends BasePo{
 	
-	@Column(name="topic_id")
-	private Integer topicId;
+	@Column(name="key_word", length=128)
+	private String keyWord;
 	
 	@Column(name="point_content", length=10240)
 	private String content;

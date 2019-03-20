@@ -5,10 +5,10 @@
 <head>
 <meta charset="UTF-8">
 <title>我的大数据</title>
-<link rel="stylesheet" href="static/css/element-ui.css">
+<link rel="stylesheet" href="static/element-ui/lib/theme-chalk/index.css">
 <link rel="stylesheet" href="static/css/frame.css">
-<script type="text/javascript" src="static/js/vue.js"></script> 
-<script type="text/javascript" src="static/js/element-ui.js"></script>
+<script type="text/javascript" src="static/vue/dist/vue.js"></script> 
+<script type="text/javascript" src="static/element-ui/lib/index.js"></script>
 <script type="text/javascript" src="static/js/jquery.js"></script>
 </head>
 <body>

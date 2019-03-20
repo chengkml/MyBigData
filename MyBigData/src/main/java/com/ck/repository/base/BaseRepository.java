@@ -10,6 +10,7 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.ck.orm.dao.base.BaseDao;
+import com.github.pagehelper.Page;
 /**
  * @Title:Repo抽象父类
  * @author:Chengk
@@ -35,13 +36,28 @@ public abstract class BaseRepository<D extends BaseDao<P>, P, M> {
 	public abstract P modelToPo(M model);
 	
 	public List<M> posToModels(List<P> pos) {
-		List<M> models = new ArrayList<>();
-		if(null!=pos && !pos.isEmpty()) {
-			for(P po : pos) {
-				models.add(poToModel(po));
+		if(pos instanceof Page) {
+			Page<M> page = new Page<>();
+			@SuppressWarnings("unchecked")
+			Page<M> temp = (Page<M>) pos;
+			page.setPageNum(temp.getPageNum());
+			page.setPageSize(temp.getPageSize());
+			page.setTotal(temp.getTotal());
+			if(!pos.isEmpty()) {
+				for(P po : pos) {
+					page.add(poToModel(po));
+				}
 			}
+			return page;
+		}else {
+			List<M> models = new ArrayList<>();
+			if(null!=pos && !pos.isEmpty()) {
+				for(P po : pos) {
+					models.add(poToModel(po));
+				}
+			}
+			return models;
 		}
-		return models;
 	}
 	
 	public List<P> modelsToPos(List<M> ms){
@@ -86,10 +102,11 @@ public abstract class BaseRepository<D extends BaseDao<P>, P, M> {
 	 * 保存模型
 	 * @param m
 	 */
-	public void saveModel(M m) {
+	public M saveModel(M m) {
 		if(m!=null) {
 			dao.saveAndFlush(modelToPo(m));
 		}
+		return m;
 	}
 	
 	/**
@@ -106,20 +123,9 @@ public abstract class BaseRepository<D extends BaseDao<P>, P, M> {
 	 * @param m
 	 */
 	@Transactional
-	public void deleteModel (M m) {
-		dao.delete(modelToPo(m));
+	public String deleteById (String id) {
+		dao.delete(id);
+		return id;
 	}
 	
-	/**
-	 * 批量删除模型
-	 * @param ms
-	 */
-	@Transactional
-	public void deleteModels (List<M> ms) {
-		List<P> pos = new ArrayList<>();
-		for(M m : ms) {
-			pos.add(modelToPo(m));
-		}
-		dao.delete(pos);
-	}
 }

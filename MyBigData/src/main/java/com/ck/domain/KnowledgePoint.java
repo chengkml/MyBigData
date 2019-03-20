@@ -11,7 +11,7 @@ import lombok.EqualsAndHashCode;
 @EqualsAndHashCode(callSuper=false)
 public class KnowledgePoint extends BaseModel{
 	
-	private Integer topicId;
+	private String keyWord;
 	
 	private String content;
 	

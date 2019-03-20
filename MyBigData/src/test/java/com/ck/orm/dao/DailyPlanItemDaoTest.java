@@ -1,14 +1,11 @@
 package com.ck.orm.dao;
 
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.assertEquals;
 
 import java.util.Date;
 
 import org.apache.commons.lang.time.DateUtils;
 import org.junit.Test;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
 import org.springframework.test.annotation.Rollback;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -37,25 +34,7 @@ public class DailyPlanItemDaoTest extends BaseDaoTest<DailyPlanItemPo, DailyPlan
 	@Rollback(true)
 	public void testFindByPlanId() {
 		testSave();
-		assertNotNull(dao.findByPlanId("1"));
-	}
-	
-	@Test
-	@Rollback(true)
-	@Transactional
-	public void testGetPlanItemByRange() {
-		testSave();
-		Pageable page = new PageRequest(0, 5);
-		assertTrue(1==(dao.getPlanItemByRange("ck", DateUtils.addDays(new Date(), -2), new Date(), page)).getTotalElements());
-	}
-	
-	@Test
-	@Rollback(true)
-	@Transactional
-	public void testGetPlanByPage() {
-		testSave();
-		Pageable page = new PageRequest(0, 5);
-		assertTrue((dao.getPlanItemByPage("ck", page)).getTotalElements()==1);
+		assertEquals(1,dao.findByPlanId("1").size());
 	}
 	
 }

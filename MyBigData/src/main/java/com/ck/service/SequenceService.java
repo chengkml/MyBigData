@@ -11,7 +11,6 @@ import com.ck.orm.dao.SequenceDao;
 import com.ck.orm.entity.SequencePo;
 import com.ck.repository.SequenceRepository;
 import com.ck.service.base.BaseService;
-import com.ck.vo.SeqVo;
 /**
  * @Title:索引服务
  * @author:Chengk
@@ -19,7 +18,7 @@ import com.ck.vo.SeqVo;
  * @Version:1.0
  */
 @Service
-public class SequenceService extends BaseService<SequenceDao, SequenceRepository, SequencePo, Sequence, SeqVo>{
+public class SequenceService extends BaseService<SequenceDao, SequenceRepository, SequencePo, Sequence> {
 	
 	public String getPlanSeq(String userId) {
 		return getSeq(userId, ObjectTypeEnum.PLAN.getType());
@@ -52,15 +51,5 @@ public class SequenceService extends BaseService<SequenceDao, SequenceRepository
 		seq.setSequenceVal(res);
 		repo.saveModel(seq);
 		return res;
-	}
-
-	@Override
-	public SeqVo modelToVo(Sequence model) {
-		return null;
-	}
-
-	@Override
-	public Sequence voToModel(SeqVo vo) {
-		return null;
 	}
 }

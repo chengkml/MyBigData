@@ -1,31 +1,30 @@
 package com.ck.enums;
 
-public enum FinishTypeEnum {
+import com.ck.annotation.Enums;
+
+/**
+ * 完成类型枚举
+ * @author Chengk
+ */
+@Enums("finishType")
+public enum FinishTypeEnum implements AbstractEnum{
 	
-	INITIAL(0,"待启动"),RUNNING(1,"执行中"),FINISH(2,"已完成"),ABANDON(3,"已废弃");
+	INITIAL("0","待启动"),RUNNING("1","执行中"),FINISH("2","已完成"),ABANDON("3","已废弃");
 	
-	private FinishTypeEnum(int value, String label) {
-		this.value = value;
+	private FinishTypeEnum(String code, String label) {
+		this.code = code;
 		this.label = label;
 	}
 	
-	public int getValue() {
-		return value;
-	}
-
-	public void setValue(int value) {
-		this.value = value;
+	public String getCode() {
+		return code;
 	}
 
 	public String getLabel() {
 		return label;
 	}
 
-	public void setLabel(String label) {
-		this.label = label;
-	}
-
-	private int value;
+	private String code;
 	
 	private String label;
 }

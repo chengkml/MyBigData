@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--命名空间应该是对应接口的包名+接口名 -->
+<mapper namespace="com.ck.orm.mapper.inf.DailyPlanItemMapper">
+	<select id="selectPlanItemsByConds"
+		resultType="com.ck.orm.entity.DailyPlanItemPo">
+		select ID,CREATE_DATE CREATEDATE,CREATE_BY CREATEBY,
+		LAST_MODIFIED_TIME LASTMODIFIEDDATE,LAST_MODIFIED_BY LASTMODIFIEDBY,
+		PLAN_ID PLANID,ITEM_CONTENT ITEMCONTENT,PRIORITY PRIORITY,PLAN_TIME PLANTIME,
+		FINISH_TIME FINISHTIME,FINISH_TYPE FINISHTYPE,FINISH_DESCR FINISHDESCR,
+		START_TIME STARTTIME,REMINDON REMINDON from DAILY_PLAN_ITEM
+		<trim prefix="where" prefixOverrides="and|or ">
+			<if test="beginTime != null">
+    			<![CDATA[   and date_format(CREATE_DATE, '%Y-%m-%d') >= date_format(#{beginTime}, '%Y-%m-%d')   ]]>
+			</if>
+			<if test="endTime != null">
+    			<![CDATA[  and date_format(CREATE_DATE, '%Y-%m-%d') <= date_format(#{endTime}, '%Y-%m-%d')    ]]>
+			</if>
+			<if test="keyWord != null and keyWord != ''">
+				AND (item_content like #{keyWord})
+			</if>
+			<if test="state != null and state != ''">
+				AND (finish_type = #{state})
+			</if>
+			<if test="createBy != null and createBy != ''">
+				AND (create_by = #{createBy})
+			</if>
+		</trim>
+	</select>
+</mapper>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ck.orm.mapper.inf.KnowledgePointMapper">
+	<select id="findKnowledgePointByConds"
+		resultType="com.ck.orm.entity.KnowledgePointPo">
+		SELECT ID,CREATE_DATE CREATEDATE,CREATE_BY CREATEBY,
+		LAST_MODIFIED_TIME LASTMODIFIEDDATE,LAST_MODIFIED_BY LASTMODIFIEDBY,
+		KEY_WORD KEYWORD,POINT_CONTENT CONTENT FROM KNOWLEDGE_POINT
+		<trim prefix="WHERE" prefixOverrides="AND |OR ">
+			<if test="beginTime!=null">
+    			<![CDATA[   and DATE_FORMAT(create_date, '%Y-%m-%d')>=  DATE_FORMAT(#{beginTime}, '%Y-%m-%d')   ]]>
+			</if>
+			<if test="endTime!=null">
+    			<![CDATA[  and DATE_FORMAT(create_date, '%Y-%m-%d') <= DATE_FORMAT(#{endTime}, '%Y-%m-%d')    ]]>
+			</if>
+			<if test="keyWord != null and keyWord != ''">
+				AND (key_word like #{keyWord} OR point_content like #{keyWord})
+			</if>
+			<if test="name != null and name != ''">
+				AND (create_by = #{name})
+			</if>
+		</trim>
+	</select>
+</mapper>
